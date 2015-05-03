@@ -17,10 +17,6 @@ class Playlist
     @@playlist_collection
   end
 
-  def self.save
-    @@playlist_collection.push(self)
-  end
-
   def self.clear
     @@playlist_collection = []
   end
@@ -33,5 +29,9 @@ class Playlist
       end
     end
     playlist_found
+  end
+
+  def add_song(song)
+    @songs.push(song)
   end
 end

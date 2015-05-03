@@ -1,0 +1,17 @@
+<h2>Your Current Playlists:</h2>
+
+<ul>
+	<% @playlists.each do |playlist| %>
+	<li> <a href="/playlist/<%= playlist.playlist_id %>"><%= playlist.name %> </a></li>
+	<% end %>
+</ul>
+
+<!-- Form to enter a new playlist -->
+<form action="/add_playlist" method='post'>
+	<div class="form-group">
+		<label for="playlist_name">Create new Playlist:</label>
+		<input name="playlist_name" id="playlist_name" type="text" class="form-control">
+	</div>
+	<button class="btn btn-warning">Submit</button>
+</form>
+

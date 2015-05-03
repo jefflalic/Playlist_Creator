@@ -25,6 +25,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    require_all (1.3.2)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -60,6 +61,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   pry
+  require_all
   rspec
   sinatra
   sinatra-contrib

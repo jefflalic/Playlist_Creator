@@ -1,0 +1,12 @@
+<ul>
+	<% @playlists.each do |playlist| %>
+	<li class="playlists">
+		<%= playlist.name %>
+		<ol>
+			<% playlist.songs.each do |song| %>
+			<li> <%= song.title %> <%= song.artist %> </li>
+			<% end %>
+		</ol>
+	</li>
+	<% end %>
+</ul>

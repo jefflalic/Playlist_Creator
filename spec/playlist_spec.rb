@@ -1,5 +1,6 @@
 require 'rspec'
 require 'playlist'
+require 'song'
 
 describe Playlist do
   before do
@@ -33,6 +34,15 @@ describe Playlist do
       test_playlist_2 = Playlist.new(name: "EDM", date_added: "2015, May 4")
       test_playlist_2.save
       expect(Playlist.get_playlist(2)).to eq(test_playlist_2)
+    end
+  end
+  describe '#add_song' do
+    it 'will add a song to the playlist' do
+      test_playlist = Playlist.new(name: "Rap", date_added: "2015, May 3")
+      test_playlist.save
+      test_song = Song.new(title: "Studio", artist: "Schoolboy Q")
+      test_playlist.add_song(test_song)
+      expect(test_playlist.songs).to eq([test_song])
     end
   end
 end

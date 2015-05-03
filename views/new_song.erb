@@ -1,0 +1,18 @@
+<h3> <%= @playlist.name %> </h3>
+
+<ol>
+	<% @playlist.songs.each do |song| %>
+	<li> <%= song.title%> <%= song.artist %></li>
+	<% end %>
+</ol>
+
+<form action="/playlist/<%= @playlist.playlist_id %>" method='post'>
+	<div class="form-group">
+		<label for="song_title">Song Title:</label>
+		<input name="song_title" id="song_title" type="text" class="form-control">
+		
+		<label for="song_artist">Artist:</label>
+		<input name="song_artist" id="song_artist"type="text" class="form-control">
+	</div>
+	<button type="submit">Add</button>
+</form>
