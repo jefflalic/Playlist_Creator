@@ -8,6 +8,7 @@ Create your own playlist. Add songs to any playlist that has been saved.
 ####Usage
 App can be found at https://tranquil-reaches-6356.herokuapp.com/.
 You can also view the app locally using Sinatra. Clone this repository:
+
 ```git clone https://github.com/jlalic/Playlist_creator.git```
 
 Run ```bundle``` to install the required gems included in the *Gemfile*. 
