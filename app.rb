@@ -11,6 +11,7 @@ get '/' do
 end
 
 post '/add_playlist' do
+  @playlists = Playlist.all
   new_playlist = Playlist.new(name: params.fetch('playlist_name'))
   new_playlist.save
   erb(:index)

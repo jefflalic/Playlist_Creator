@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Playist Creator</title>
+	<title>PlayistCreator</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="main">
+		<div class="navbar">
 		<header>
 			<h1>Playlist Creator</h1>
 		</header>
@@ -14,11 +17,10 @@
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/playlists">Playlists</a></li>
-				<li><a href="#">Edit</a></li>
-				<li><a href="/clear">Clear</a></li>
+				<li><a href="/clear">DELETE</a></li>
 			</ul>
 		</nav>
-
+		</div>
 		<div class="container">
 			<%= yield %>
 		</div>

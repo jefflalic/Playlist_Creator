@@ -2,7 +2,7 @@
 
 <ol>
 	<% @playlist.songs.each do |song| %>
-	<li> <%= song.title%> <%= song.artist %></li>
+	<li> <%= song.title%>: <%= song.artist %></li>
 	<% end %>
 </ol>
 
@@ -14,5 +14,5 @@
 		<label for="song_artist">Artist:</label>
 		<input name="song_artist" id="song_artist"type="text" class="form-control">
 	</div>
-	<button type="submit">Add</button>
+	<button type="submit" class="btn btn-success">Add</button>
 </form>
